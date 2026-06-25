@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 const App: React.FC = () => {
@@ -20,7 +16,7 @@ const Header: React.FC = () => {
   const navLinks = ['Home', 'About Us', 'Services', 'Products', 'Contact'];
   return (
     <header className='header'>
-      <div className='logo'>DAMINGO</div>
+      <div className='logo'>DAMIUNGO</div>
       <nav className='nav'>
         {navLinks.map(link => (
           <a key={link} href="#" className="nav-link">{link}</a>
