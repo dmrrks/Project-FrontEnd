@@ -1,17 +1,21 @@
-import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
-
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/home' element={<Home />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+        </Route>
       </Routes>
-      <Outlet />
     </BrowserRouter>
   );
-};
+}
 
 export default App;
