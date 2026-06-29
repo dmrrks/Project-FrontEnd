@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 
 const Layout = () => {
   return (
-    <div className="min-h-screen flex flex-col relative bg-gray-400 text-gray-900">
+    <div className="min-h-screen flex flex-col relative bg-white text-gray-900">
       <Header />
       
       <main className="flex-grow">
@@ -12,6 +13,7 @@ const Layout = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
